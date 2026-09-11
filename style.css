@@ -4,30 +4,30 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, rgb(91, 13, 217),rgb(25, 133, 221));
+    background: linear-gradient(to bottom right, hsl(263, 89%, 45%), hsl(207, 80%, 48%));
 }
 
-.cartao{
+.cartao {
     width: 500px;
     height: auto;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: hsla(0, 0%, 100%, 0.8);
     overflow: hidden;
     box-shadow: 0px 0px 15px hsl(44, 97%, 47%);
 }
 
-.cartao .cartao-header{
+.cartao .cartao-header {
     width: 100%;
     height: 80px;
     background: linear-gradient(to bottom right, hsl(44, 97%, 47%), hsl(44, 97%, 67%));
 }
 
-.cartao .usuario-foto{
+.cartao .usuario-foto {
     border: solid hsl(0, 100%, 50%);
     width: 120px;
     height: 120px;
@@ -40,30 +40,30 @@ body{
     background-size: cover;
 }
 
-.cartao .usuario-foto:hover{
+.cartao .usuario-foto:hover {
     box-shadow: 0px 0px 5px hsl(0, 0%, 20%);
     scale: 1.05;
     border: solid 3px hsl(0, 0%, 100%);
     cursor: pointer;
 }
 
-.cartao .area-usuario{
+.cartao .area-usuario {
     text-align: center;
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.cartao .area-usuario h1{
+.cartao .area-usuario h1 {
     font-size: 32px;
 }
 
-.cartao .area-usuario p{
+.cartao .area-usuario p {
     font-weight: 700;
     color: hsl(0, 0%, 20%);
 }
 
-.cartao .area-usuario .informacoes{
+.cartao .area-usuario .informacoes {
     margin: 20px auto;
     background-color: hsl(46, 100%, 85%);
     width: 90%;
@@ -72,49 +72,96 @@ body{
     border-left: solid 5px hsl(44, 97%, 47%);
 }
 
-.cartao .informacoes strong p{
-    display: inline-block;
-    width: 45%;
-    text-align: left;
-    font-weight: 750;
-    color: hsl(0, 0%, 31%);
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-.cartao .informacoes p {
-    display: inline-block;
-    width: 45%;
-    text-align: right;
-    font-weight: 500;
+.info-linha .categoria,
+.valor {
     margin: 10px 0 10px 0;
-    color: hsl(0, 0%, 53%);
-    font-size: 15px;
 }
 
-.cartao .informacoes hr{
+.info-linha .categoria {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.info-linha .valor {
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+}
+
+.cartao .informacoes hr {
     border: solid 1px hsl(46, 82%, 74%);
     border-radius: 10px;
 }
 
-.cartao .area-usuario button{
+.redes-sociais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+}
+
+.redes-sociais .botao{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.redes-sociais .botao:hover{
+    filter: brightness(90%);
+}
+
+.redes-sociais .github{
+    background-color: hsl(0, 0%, 6%);
+    color: white;
+}
+
+.redes-sociais .linkedin{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(210, 90%, 40%) ;
+}
+
+.redes-sociais .portfolio{
+    background-color: hsl(261, 96%, 44%);
+    color: hsl(0, 0%, 100%);
+}
+
+ion-icon{
+    font-size: 24px;
+}
+
+.btn-principal button {
     width: 90%;
     height: 50px;
-    border-radius: 5px;
-    border: none;
-    background-color:hsl(44, 97%, 47%);
-    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
     font-size: 18px;
-    box-shadow: 0px 0px 10px #969696;
-    transition: 0.2s, background-position 0.2s;;
-    cursor: pointer;
+    box-shadow: 0px 0px 5px hsl(0, 0%, 59%);
     margin: 20px;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(44, 97%, 47%);
+    border: none;
+    transition: 0.1s;
+    cursor: pointer;
 }
 
-.cartao .area-usuario button:hover{
-    box-shadow: 0px 0px 15px #969696;
-    scale: 1.01;
-    background-color:hsl(44, 88%, 53%);
+.btn-principal button:hover {
+    box-shadow: 0px 0px 10px hsl(0, 0%, 59%);
+    background-color: hsl(44, 97%, 57%);
+}
+.btn-principal button:active {
+    box-shadow: 0px 0px 3px hsl(0, 0%, 59%);
+    background-color: hsl(44, 93%, 53%);
 }
